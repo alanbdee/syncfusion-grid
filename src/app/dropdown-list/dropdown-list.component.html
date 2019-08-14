@@ -1,0 +1,29 @@
+<h2>Dropdown list</h2>
+<h3>Basic Strings</h3>
+
+<ejs-dropdownlist formControlName="selectLocation"
+                  [(value)]="testSelectedLocation"
+                  [dataSource]='testLocations'
+                  class="sv-site-list ng-untouched ng-pristine ng-valid">
+</ejs-dropdownlist>
+
+output: {{testSelectedLocation | json}}
+
+<h3>Complex objects</h3>
+<ejs-dropdownlist formControlName="selectLocation"
+                  [(value)]="testSelectedLocation2"
+                  [dataSource]='testLocations2'
+                  [fields]="{value: 'value', text: 'text'}"
+                  class="sv-site-list ng-untouched ng-pristine ng-valid">
+</ejs-dropdownlist>
+output: {{testSelectedLocation2 | json}}
+
+<h3>Complex objects 2</h3>
+<ejs-dropdownlist formControlName="selectLocation"
+                  [(value)]="testSelectedLocation3"
+                  [dataSource]='testLocations3'
+                  [fields]="{value: 'deptCode', text: 'deptDesc'}"
+                  class="sv-site-list ng-untouched ng-pristine ng-valid">
+</ejs-dropdownlist>
+output: {{testSelectedLocation3 | json}}
+
